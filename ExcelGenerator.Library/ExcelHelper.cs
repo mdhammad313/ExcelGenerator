@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using ExcelGenerator.Atrributes;
 using ExcelGenerator.Core;
+using ExcelGenerator.Library.Atrributes;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
@@ -23,6 +23,8 @@ namespace ExcelGenerator.Library
         public static MemoryStream GenerateExcel<T>(IEnumerable<T> records) where T : class
         {
             var stream = new MemoryStream();
+
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             using (var package = new ExcelPackage(stream))
             {
