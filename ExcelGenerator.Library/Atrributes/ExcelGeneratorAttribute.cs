@@ -11,7 +11,7 @@ namespace ExcelGenerator.Library.Atrributes
         private readonly int _order;
         private readonly string _dateFormat;
 
-        public ExcelGeneratorAttribute(string columnName, int order = 1, string dateFormat = null)
+        public ExcelGeneratorAttribute(string columnName = "", int order = 1, string dateFormat = null)
         {
             _columnName = columnName;
             _order = order;

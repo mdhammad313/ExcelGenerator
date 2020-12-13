@@ -57,7 +57,7 @@ namespace ExcelGenerator.Library
             {
                 var headerRow = 1;
                 var attributeValue = x.Property.GetCustomAttributes(false).FirstOrDefault(a => a is ExcelGeneratorAttribute) as ExcelGeneratorAttribute;
-                workSheet.Cells[headerRow, x.ColumnIndex].Value = attributeValue.ColumnName;
+                workSheet.Cells[headerRow, x.ColumnIndex].Value = string.IsNullOrEmpty(attributeValue.ColumnName) ?  x.Property.Name : attributeValue.ColumnName;
 
                 if (x.Property.PropertyType == typeof(DateTime?) || x.Property.PropertyType == typeof(DateTime))
                 {
