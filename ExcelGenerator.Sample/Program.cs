@@ -17,18 +17,12 @@ namespace ExcelGenerator.Sample
             //Get sample data to generate excel 
             var data = GetSampleData();
 
-            //Get path of the current directory where excel file will be generated
-            var currentDirectory = Directory.GetCurrentDirectory();
-
-
-            //Method1: Get excel file in memory stream
+            //Method 1: Get excel file stream 
             var responseStream = ExcelHelper.GenerateExcel(data);
-            var fileStream = new FileStream($"{currentDirectory}\\SampleFileWithStream.xlsx", FileMode.Create, FileAccess.Write);
-            responseStream.CopyTo(fileStream);
-            fileStream.Dispose();
 
-            //Method2: Generate excel file on specified path 
-            //ExcelHelper.GenerateExcel($"{currentDirectory}\\SampleFileWithFilePath.xlsx",data);
+            //Method 2: Generate excel file on specified path 
+            var currentDirectory = Directory.GetCurrentDirectory();
+            ExcelHelper.GenerateExcel($"{currentDirectory}\\SampleFile.xlsx", data);
 
             Console.WriteLine("Excel file generated");
             Console.ReadKey();

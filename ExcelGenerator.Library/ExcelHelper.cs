@@ -14,9 +14,10 @@ namespace ExcelGenerator.Library
     {
         public static void GenerateExcel<T>(string filePath, IEnumerable<T> records) where T : class
         {
-            using (var package = new ExcelPackage(new FileInfo(filePath)))
+            using (var package = new ExcelPackage())
             {
                 GeneratePackage(package, records);
+                package.SaveAs(new FileInfo(filePath));
             }
         }
 
@@ -29,6 +30,7 @@ namespace ExcelGenerator.Library
             using (var package = new ExcelPackage(stream))
             {
                 GeneratePackage(package, records);
+                package.Save();
                 stream.Position = 0;
             }
 
@@ -40,7 +42,7 @@ namespace ExcelGenerator.Library
             var worksheetsName =  AppResource.ExcelSheetName;
             var workSheet = package.Workbook.Worksheets.Add(worksheetsName);
 
-            workSheet.Row(1).Height = 20;
+            workSheet.Row(1).Height = double.Parse(AppResource.ExcelRowHeight);
             workSheet.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             workSheet.Row(1).Style.Font.Bold = true;
 
@@ -80,7 +82,6 @@ namespace ExcelGenerator.Library
                     workSheet.Cells[rowIndex, x.ColumnIndex].Value = x.Property.GetValue(currentRow);
                 });
             }
-            package.Save();
         }
     }
 }

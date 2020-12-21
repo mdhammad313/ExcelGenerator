@@ -61,6 +61,15 @@ namespace ExcelGenerator.Core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 20.
+        /// </summary>
+        public static string ExcelRowHeight {
+            get {
+                return ResourceManager.GetString("ExcelRowHeight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sheet1.
         /// </summary>
         public static string ExcelSheetName {
