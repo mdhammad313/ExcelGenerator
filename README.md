@@ -77,5 +77,4 @@ I have also added sample project named `ExcelGenerator.Sample` which consumes li
 ## Nuget
 Also available on Nuget 
 
-[![Version](https://img.shields.io/badge/nuget-v1.0.0-brightgreen.svg)](https://www.nuget.org/packages/ExcelGenerator.net)
-
+[![Version](https://img.shields.io/nuget/vpre/ExcelGenerator.net.svg)](https://www.nuget.org/packages/ExcelGenerator.net)
