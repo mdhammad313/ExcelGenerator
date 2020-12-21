@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using ExcelGenerator.Core;
-using ExcelGenerator.Library.Atrributes;
+using ExcelGenerator.Atrributes;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
 
-namespace ExcelGenerator.Library
+namespace ExcelGenerator
 {
     public class ExcelHelper
     {

@@ -4,13 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Mohammad Hammad</Authors>
     <PackageId>ExcelGenerator.net</PackageId>
-    <Product>ExcelGenerator.net</Product>
+    <Product>ExcelGenerator.Net</Product>
     <PackageTags>Excel;Generate</PackageTags>
     <Company>Mohammad Hammad</Company>
     <RepositoryUrl>https://github.com/mdhammad313/ExcelGenerator</RepositoryUrl>
-    <Version>1.0.2</Version>
+    <Version>1.0.6</Version>
     <PackageProjectUrl>https://github.com/mdhammad313/ExcelGenerator</PackageProjectUrl>
     <Description>Library for generating excel file without having to worry about data type binding, column mapping,  column names, order and date formats.</Description>
+    <AssemblyName>ExcelGenerator</AssemblyName>
+    <RootNamespace>ExcelGenerator</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,7 +20,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExcelGenerator.Core\ExcelGenerator.Core.csproj" />
+    <Compile Update="AppResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AppResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AppResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

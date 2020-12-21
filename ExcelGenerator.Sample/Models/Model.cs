@@ -1,4 +1,4 @@
-﻿using ExcelGenerator.Library.Atrributes;
+﻿using ExcelGenerator.Atrributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
