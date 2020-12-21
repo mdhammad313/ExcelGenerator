@@ -73,3 +73,9 @@ Now generate excel using stream or generate excel on specific path
 
 ## Sample Project 
 I have also added sample project named `ExcelGenerator.Sample` which consumes library with all possible methods  
+
+## Nuget
+Also available on Nuget 
+
+[![Version](https://img.shields.io/badge/nuget-v1.0.0-brightgreen.svg)](https://www.nuget.org/packages/ExcelGenerator.net)
+
