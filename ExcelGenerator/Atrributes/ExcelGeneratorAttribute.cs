@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ExcelGenerator.Library.Atrributes
+namespace ExcelGenerator.Atrributes
 {
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property, Inherited = true, AllowMultiple = false)]
     public class ExcelGeneratorAttribute : Attribute

@@ -1,5 +1,4 @@
-﻿using ExcelGenerator.Library;
-using ExcelGenerator.Sample.Models;
+﻿using ExcelGenerator.Sample.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;

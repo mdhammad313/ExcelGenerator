@@ -54,9 +54,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExcelGenerator.Library\ExcelGenerator.Library.csproj">
+    <ProjectReference Include="..\ExcelGenerator\ExcelGenerator.csproj">
       <Project>{e066d978-ce3d-4eec-8e05-077640dd49e9}</Project>
-      <Name>ExcelGenerator.Library</Name>
+      <Name>ExcelGenerator</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
