@@ -3,7 +3,7 @@ ExcelGenerator is a simple library to generate excel by just passing the list of
 of column name, column orders and date formats automatically or just define column name, order and date formats using attributes. 
 It also provides multiple overloads for providing generating excel on specific location or having stream.
 
-### Installation
+## Installation
 ExcelGenerator is available as a NuGet Package. Type the following command into NuGet Package Manager Console window to install it:
 
 ```
@@ -70,3 +70,6 @@ Now generate excel using stream or generate excel on specific path
             ExcelHelper.GenerateExcel($"{currentDirectory}\\SampleFile.xlsx", data);
 
 ```
+
+## Sample Project 
+I have also added sample project named `ExcelGenerator.Sample` which consumes library with all possible methods  
