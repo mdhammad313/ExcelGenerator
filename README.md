@@ -1,7 +1,5 @@
 # ExcelGenerator
-ExcelGenerator is a simple library to generate excel by just passing the list of records irrespective of type. It will also take care 
-of column name, column orders and date formats automatically or just define column name, order and date formats using attributes. 
-It also provides multiple overloads for providing generating excel on specific location or having stream.
+ExcelGenerator is a simple library to generate excel easily more than ever by just passing the list of records irrespective of model type, column mapping and data bindings. It will also take care of column name, column orders and date formats automatically or just define column name, order and date formats using attributes. It also provides multiple overloads for providing generating excel on specific location or having stream.
 
 ## Installation
 ExcelGenerator is available as a NuGet Package. Type the following command into NuGet Package Manager Console window to install it:
