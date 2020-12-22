@@ -7,7 +7,7 @@ It also provides multiple overloads for providing generating excel on specific l
 ExcelGenerator is available as a NuGet Package. Type the following command into NuGet Package Manager Console window to install it:
 
 ```
-PM> Install-Package ExcelGenerator
+PM> Install-Package ExcelGenerator.net
 ```
 
 ## Getting Started
