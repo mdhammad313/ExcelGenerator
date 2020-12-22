@@ -72,7 +72,7 @@ Now generate excel using stream or generate excel on specific path
 ```
 
 ## Sample Project 
-I have also added sample project named `ExcelGenerator.Sample` which consumes library with all possible methods  
+Sample project have also been added, named `ExcelGenerator.Sample` which consumes library with all possible methods  
 
 ## Nuget
 Also available on Nuget 
