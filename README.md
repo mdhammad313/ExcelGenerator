@@ -20,7 +20,7 @@ Here `County` property will not be added in excel file as it doesn't have excel 
         [ExcelGenerator("First Name")]
         public string FirstName { get; set; }
 
-        [ExcelGenerator("Birth Date",dateFormat:Constants.DateFormat)]
+        [ExcelGenerator("Birth Date",dateFormat:"MMM dd, yyyy")]
         public DateTime DateOfBirth { get; set; }
 
         [ExcelGenerator]
