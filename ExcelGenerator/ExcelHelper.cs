@@ -13,6 +13,8 @@ namespace ExcelGenerator
     {
         public static void GenerateExcel<T>(string filePath, IEnumerable<T> records, string sheetName = "") where T : class
         {
+            ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
             using (var package = new ExcelPackage())
             {
                 GeneratePackage(package, records, sheetName);
@@ -23,7 +25,6 @@ namespace ExcelGenerator
         public static MemoryStream GenerateExcel<T>(IEnumerable<T> records, string sheetName = "") where T : class
         {
             var stream = new MemoryStream();
-
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             using (var package = new ExcelPackage(stream))

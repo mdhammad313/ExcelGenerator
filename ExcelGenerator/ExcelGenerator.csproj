@@ -4,11 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Mohammad Hammad</Authors>
     <PackageId>ExcelGenerator.net</PackageId>
-    <Product>ExcelGenerator.Net</Product>
+    <Product>ExcelGenerator.net</Product>
     <PackageTags>Excel;Generate</PackageTags>
     <Company>Mohammad Hammad</Company>
     <RepositoryUrl>https://github.com/mdhammad313/ExcelGenerator</RepositoryUrl>
-    <Version>1.0.6</Version>
+    <Version>1.0.9</Version>
     <PackageProjectUrl>https://github.com/mdhammad313/ExcelGenerator</PackageProjectUrl>
     <Description>Library for generating excel file without having to worry about data type binding, column mapping,  column names, order and date formats.</Description>
     <AssemblyName>ExcelGenerator</AssemblyName>
