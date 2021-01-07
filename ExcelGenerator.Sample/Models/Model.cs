@@ -12,33 +12,18 @@ namespace ExcelGenerator.Sample.Models
         [ExcelGenerator("First Name")]
         public string FirstName { get; set; }
 
-        [ExcelGenerator("Last Name")]
-        public string LastName { get; set; }
-
-
-        [ExcelGenerator("Birth Date",dateFormat:Constants.DateFormat)]
-        public DateTime DateOfBirth { get; set; }
+        [ExcelGenerator(order: 3)]
+        public string Address { get; set; }
 
         [ExcelGenerator]
         public string City { get; set; }
 
         public string County { get; set; }
 
-        [ExcelGenerator]
-        public string State { get; set; }
-
-        [ExcelGenerator]
-        public int Zip { get; set; }
-
-        [ExcelGenerator("Phone Number")]
-        public string Phone { get; set; }
-
         [ExcelGenerator("Email Address")]
         public string Email { get; set; }
 
-        [ExcelGenerator(order: 3)]
-        public string Address { get; set; }
-
-
+        [ExcelGenerator("Birth Date",dateFormat:Constants.DateFormat)]
+        public DateTime DateOfBirth { get; set; }
     }
 }
