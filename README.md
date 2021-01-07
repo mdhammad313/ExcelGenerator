@@ -69,6 +69,13 @@ Now generate excel using stream or generate excel on specific path
 
 ```
 
+You can also customize sheet name 
+```csharp
+
+   ExcelHelper.GenerateExcel($"{currentDirectory}\\SampleFile.xlsx", data,"TestSheet");
+```
+
+
 ## Sample Project 
 Sample project have also been added, named `ExcelGenerator.Sample` which consumes library with all possible methods  
 
