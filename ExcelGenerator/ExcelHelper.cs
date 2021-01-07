@@ -11,16 +11,16 @@ namespace ExcelGenerator
 {
     public class ExcelHelper
     {
-        public static void GenerateExcel<T>(string filePath, IEnumerable<T> records) where T : class
+        public static void GenerateExcel<T>(string filePath, IEnumerable<T> records, string sheetName = "") where T : class
         {
             using (var package = new ExcelPackage())
             {
-                GeneratePackage(package, records);
+                GeneratePackage(package, records, sheetName);
                 package.SaveAs(new FileInfo(filePath));
             }
         }
 
-        public static MemoryStream GenerateExcel<T>(IEnumerable<T> records) where T : class
+        public static MemoryStream GenerateExcel<T>(IEnumerable<T> records, string sheetName = "") where T : class
         {
             var stream = new MemoryStream();
 
@@ -28,7 +28,7 @@ namespace ExcelGenerator
 
             using (var package = new ExcelPackage(stream))
             {
-                GeneratePackage(package, records);
+                GeneratePackage(package, records, sheetName);
                 package.Save();
                 stream.Position = 0;
             }
@@ -36,15 +36,15 @@ namespace ExcelGenerator
             return stream;
         }
 
-        private static void GeneratePackage<T>(ExcelPackage package, IEnumerable<T> records) where T : class
+        private static void GeneratePackage<T>(ExcelPackage package, IEnumerable<T> records, string sheetName) where T : class
         {
-            var worksheetsName =  AppResource.ExcelSheetName;
+            var worksheetsName = string.IsNullOrEmpty(sheetName) ? AppResource.ExcelSheetName : sheetName;
             var workSheet = package.Workbook.Worksheets.Add(worksheetsName);
 
             workSheet.Row(1).Height = double.Parse(AppResource.ExcelRowHeight);
             workSheet.Row(1).Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
             workSheet.Row(1).Style.Font.Bold = true;
-
+            
             var propertyList = typeof(T).GetProperties().Where(x => x.GetCustomAttributes(typeof(ExcelGeneratorAttribute), false).Any())
                                                         .OrderBy(x => (x.GetCustomAttributes(typeof(ExcelGeneratorAttribute), false)
                                                                       .Single() as ExcelGeneratorAttribute).Order)
